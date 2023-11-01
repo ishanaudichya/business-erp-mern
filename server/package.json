@@ -1,16 +1,14 @@
 {
-  "name": "pos-mern",
+  "name": "erp-mern",
   "version": "1.0.0",
-  "description": "pos mern app",
-  "main": "server.js",
+  "description": "erp mern app",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "node index.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "seed": "node seeder.js"
+    "dev": "concurrently \"npm run index\" \"npm run client\" "
   },
-  "author": "techinfoyt",
+  "author": "Ishan",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.0",
