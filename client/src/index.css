@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+.item-button button {
+  margin-top: 20px;
+  width: 200px;
+  background-color: rgb(34, 78, 9);
+  color: white;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.spinner-border {
+  height: 100px;
+  width: 100px;
+}
+
+
+.category {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 0px 10px;
+  border: 1px solid #8b949e;
+  border-radius: 30px;
+  background-color: black;
+  transition: background-color 0.2s ease-in-out, scale 0.1s ease-in-out;
+}
+
+.category:hover {
+  background-color: #161b22;
+  cursor: pointer;
+  scale: 1.05;
+}
+.category-active:hover {
+  background-color: #589eff;
+}
+.category img {
+  width: 50px;
+  height: 50px;
+  margin: 10px 2%;
+}
+
+.category h4 {
+  color: white !important;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.category-active {
+  background-color: #2f81f7;
+  color: #fff;
+}
+
+.category-active img {
+  filter: brightness(0) invert(1);
+}
+
+
+.register {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0d1117;
+}
+
+.register input {
+  width: 400px !important;
+  background-color: #2e3948;
+  border: 1px solid #8b949e;
+  color: aliceblue;
+  
+}
+.register input:focus {
+  width: 400px !important;
+  background-color: #3b4a5f;
+  border: 1px solid #8b949e;
+  color: aliceblue;
+  
+}
+
+.regsiter-form {
+  border-radius: 10px;
+  border: 1px solid #8b949e;
+  background-color: #161b22;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.regsiter-form h1 {
+  text-align: center;
+  background-color: #1b212a;
+  color: #2f81f7;
+  padding: 10px;
+}
+
+.regsiter-form h3 {
+  color: #2f81f7;
+  text-align: center;
+}
+
+.regsiter-form label {
+  color: #8b949e !important;
+}
