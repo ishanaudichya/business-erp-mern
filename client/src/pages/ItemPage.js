@@ -84,6 +84,7 @@ const ItemPage = () => {
 
   // handle form  submit
   const handleSubmit = async (value) => {
+    debugger;
     if (editItem === null) {
       try {
         dispatch({
@@ -157,9 +158,12 @@ const ItemPage = () => {
             </Form.Item>
             <Form.Item name="category" label="Category">
               <Select>
-                <Select.Option value="drinks">Drinks</Select.Option>
-                <Select.Option value="rice">Rice</Select.Option>
-                <Select.Option value="noodles">Noodels</Select.Option>
+                <Select.Option value="Cricket">Cricket</Select.Option>
+                <Select.Option value="Tennis">Tennis</Select.Option>
+                <Select.Option value="Table Tennis">Table Tennis</Select.Option>
+                <Select.Option value="Fitness">Fitness</Select.Option>
+                <Select.Option value="Basketball">Basketball</Select.Option>
+                <Select.Option value="Badminton">Badminton</Select.Option>
               </Select>
             </Form.Item>
 

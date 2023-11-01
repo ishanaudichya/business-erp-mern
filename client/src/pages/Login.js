@@ -10,14 +10,19 @@ const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = async (value) => {
     try {
+      debugger;
       dispatch({
         type: "SHOW_LOADING",
       });
       const res = await axios.post("/api/users/login", value);
       dispatch({ type: "HIDE_LOADING" });
-      message.success("User Logged-In Successfully");
-      localStorage.setItem("auth", JSON.stringify(res.data));
-      navigate("/");
+      if (res.data.message === "Login Fail") {
+        return message.error("User Not Found");
+      } else {
+        message.success("User Logged-In Successfully");
+        localStorage.setItem("auth", JSON.stringify(res.data));
+        navigate("/");
+      }
     } catch (error) {
       dispatch({ type: "HIDE_LOADING" });
       message.error("Something Went Wrong");
@@ -40,10 +45,10 @@ const Login = () => {
           <h3>Login Page</h3>
           <Form layout="vertical" onFinish={handleSubmit}>
             <Form.Item name="userId" label="User ID">
-              <Input />
+              <Input required />
             </Form.Item>
             <Form.Item name="password" label="Password">
-              <Input type="password" />
+              <Input required type="password" />
             </Form.Item>
 
             <div className="d-flex justify-content-between">

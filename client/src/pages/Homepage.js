@@ -6,19 +6,36 @@ import { useDispatch } from "react-redux";
 import ItemList from "../components/ItemList";
 const Homepage = () => {
   const [itemsData, setItemsData] = useState([]);
-  const [selecedCategory, setSelecedCategory] = useState("drinks");
+  const [selecedCategory, setSelecedCategory] = useState("Cricket");
   const categories = [
     {
-      name: "drinks",
-      imageUrl: "https://cdn-icons-png.flaticon.com/512/430/430561.png",
+      name: "Cricket",
+      imageUrl:
+        "https://www.poornima.edu.in/wp-content/uploads/2023/09/cricket-clip-art_f4214a4f2.jpg",
     },
     {
-      name: "rice",
-      imageUrl: "https://cdn-icons-png.flaticon.com/512/3174/3174880.png",
+      name: "Fitness",
+      imageUrl: "https://clipart-library.com/data_images/107900.png",
     },
     {
-      name: "noodles",
-      imageUrl: "https://cdn-icons-png.flaticon.com/512/1471/1471262.png",
+      name: "Table Tennis",
+      imageUrl:
+        "https://cdn.pixabay.com/photo/2022/05/23/16/05/table-tennis-7216580_960_720.png",
+    },
+    {
+      name: "Badminton",
+      imageUrl:
+        "https://clipart-library.com/images_k/badminton-transparent-background/badminton-transparent-background-10.png",
+    },
+    {
+      name: "Football",
+      imageUrl:
+        "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/21494/football-clipart-xl.png",
+    },
+    {
+      name: "Basketball",
+      imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/2048px-Basketball_Clipart.svg.png",
     },
   ];
   const dispatch = useDispatch();
