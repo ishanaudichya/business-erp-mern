@@ -47,7 +47,7 @@ const Homepage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const { data } = await axios.get("/api/items/get-item");
+        const { data } = await axios.get("https://business-erp-mern.vercel.app/api/items/get-item");
         setItemsData(data);
         dispatch({ type: "HIDE_LOADING" });
         console.log(data);

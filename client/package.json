@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:8080",
+  // "proxy": "https://business-erp-mern.vercel.app/",
   "name": "client",
   "version": "0.1.0",
   "private": true,
