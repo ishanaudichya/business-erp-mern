@@ -11,6 +11,7 @@ import {
   CopyOutlined,
   UnorderedListOutlined,
   ShoppingCartOutlined,
+  GithubOutlined,
 } from "@ant-design/icons";
 import "../styles/DefaultLayout.css";
 import Spinner from "./Spinner";
@@ -34,7 +35,7 @@ const DefaultLayout = ({ children }) => {
       {loading && <Spinner />}
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
-          <h1 className="text-center text-light font-wight-bold mt-4">
+          <h1 className="text-center text-light font-wight-bold mb-4 mt-4">
             NEON Sports
           </h1>
         </div>
@@ -53,7 +54,16 @@ const DefaultLayout = ({ children }) => {
             <Link to="/items">Items</Link>
           </Menu.Item>
           <Menu.Item key="/customers" icon={<UserOutlined />}>
-            <Link to="/customers">Cutomers</Link>
+            <Link to="/customers">Customers</Link>
+          </Menu.Item>
+          <Menu.Item key="/dev" icon={<GithubOutlined />}>
+            <a
+              href="https://github.com/ishanaudichya/business-erp-mern"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Git Repo
+            </a>
           </Menu.Item>
           <Menu.Item
             key="/logout"
@@ -66,6 +76,13 @@ const DefaultLayout = ({ children }) => {
             Logout
           </Menu.Item>
         </Menu>
+        <div
+          className="text-center text-light font-wight-bold mb-4 b-0 w-100 position-absolute"
+          style={{ position: "absolute", bottom: "0", width: "100%" }}
+        >
+          Developed by<br></br>{" "}
+          <a href="https://ishanaudichya.netlify.app/">Ishan Audichya</a>{" "}
+        </div>
       </Sider>
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }}>

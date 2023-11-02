@@ -18,7 +18,9 @@ const BillsPage = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const { data } = await axios.get("https://business-erp-mern.vercel.app/api/bills/get-bills");
+      const { data } = await axios.get(
+        "https://business-erp-mern.vercel.app/api/bills/get-bills"
+      );
       setBillsData(data);
       dispatch({ type: "HIDE_LOADING" });
       console.log(data);
@@ -65,10 +67,10 @@ const BillsPage = () => {
       ),
     },
   ];
-  console.log(selectedBill);
+  // console.log(selectedBill);
   return (
     <DefaultLayout>
-      <div className="d-flex justify-content-between">
+      <div className="d-flex color-white justify-content-between">
         <h1>Invoice list</h1>
       </div>
 
@@ -153,10 +155,10 @@ const BillsPage = () => {
                       <td />
                       <td />
                       <td className="Rate">
-                        <h2>tax</h2>
+                        <h2>GST</h2>
                       </td>
                       <td className="payment">
-                        <h2>${selectedBill.tax}</h2>
+                        <h2>Rs {selectedBill.tax}</h2>
                       </td>
                     </tr>
                     <tr className="tabletitle">
@@ -167,7 +169,7 @@ const BillsPage = () => {
                       </td>
                       <td className="payment">
                         <h2>
-                          <b>${selectedBill.totalAmount}</b>
+                          <b>Rs {selectedBill.totalAmount}</b>
                         </h2>
                       </td>
                     </tr>
@@ -177,10 +179,10 @@ const BillsPage = () => {
               {/*End Table*/}
               <div id="legalcopy">
                 <p className="legal">
-                  <strong>Thank you for your order!</strong> 10% GST application
+                  <strong>Thank you for your order!</strong> 18% GST application
                   on total amount.Please note that this is non refundable amount
                   for any assistance please write email
-                  <b> help@mydomain.com</b>
+                  <b> neonsports@example.com</b>
                 </p>
               </div>
             </div>

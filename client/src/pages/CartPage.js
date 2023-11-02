@@ -89,14 +89,17 @@ const CartPage = () => {
         ...value,
         cartItems,
         subTotal,
-        tax: Number(((subTotal / 100) * 10).toFixed(2)),
+        tax: Number(((subTotal / 100) * 18).toFixed(2)),
         totalAmount: Number(
-          Number(subTotal) + Number(((subTotal / 100) * 10).toFixed(2))
+          Number(subTotal) + Number(((subTotal / 100) * 18).toFixed(2))
         ),
         userId: JSON.parse(localStorage.getItem("auth"))._id,
       };
       // console.log(newObject);
-      await axios.post("https://business-erp-mern.vercel.app/api/bills/add-bills", newObject);
+      await axios.post(
+        "https://business-erp-mern.vercel.app/api/bills/add-bills",
+        newObject
+      );
       message.success("Bill Generated");
       navigate("/bills");
     } catch (error) {

@@ -14,7 +14,7 @@ const ItemList = ({ item }) => {
   return (
     <div>
       <Card
-        style={{ width: 240 }}
+        style={{ width: 240, margin: 15 }}
         // cover={}
       >
         <img

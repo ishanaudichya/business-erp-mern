@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DefaultLayout from "./../components/DefaultLayout";
 import axios from "axios";
-import { Row, Col } from "antd";
 import { useDispatch } from "react-redux";
 import ItemList from "../components/ItemList";
 const Homepage = () => {
@@ -47,7 +46,9 @@ const Homepage = () => {
         dispatch({
           type: "SHOW_LOADING",
         });
-        const { data } = await axios.get("https://business-erp-mern.vercel.app/api/items/get-item");
+        const { data } = await axios.get(
+          "https://business-erp-mern.vercel.app/api/items/get-item"
+        );
         setItemsData(data);
         dispatch({ type: "HIDE_LOADING" });
         console.log(data);
@@ -78,15 +79,15 @@ const Homepage = () => {
           </div>
         ))}
       </div>
-      <Row>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {itemsData
           .filter((i) => i.category === selecedCategory)
           .map((item) => (
-            <Col xs={24} lg={6} md={12} sm={6}>
+            <div>
               <ItemList key={item.id} item={item} />
-            </Col>
+            </div>
           ))}
-      </Row>
+      </div>
     </DefaultLayout>
   );
 };
