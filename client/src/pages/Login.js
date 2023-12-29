@@ -14,7 +14,10 @@ const Login = () => {
       dispatch({
         type: "SHOW_LOADING",
       });
-      const res = await axios.post("https://business-erp-mern.vercel.app/api/users/login", value);
+      const res = await axios.post(
+        "https://business-erp-mern.vercel.app/api/users/login",
+        value
+      );
       dispatch({ type: "HIDE_LOADING" });
       if (res.data.message === "Login Fail") {
         return message.error("User Not Found");
@@ -50,10 +53,12 @@ const Login = () => {
             <Form.Item name="password" label="Password">
               <Input required type="password" />
             </Form.Item>
-
+            <p className="test-creds">
+              UserId: 123456 | Password: testpassword
+            </p>
             <div className="d-flex justify-content-between">
               <p>
-                not a user Please
+                not a user? Please
                 <Link to="/register"> Register Here !</Link>
               </p>
               <Button type="primary" htmlType="submit">

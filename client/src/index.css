@@ -23,7 +23,9 @@ body {
   height: 100px;
   width: 100px;
 }
-
+.test-creds{
+  font-size: 12px;
+}
 
 .category {
   display: flex;
