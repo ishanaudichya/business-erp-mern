@@ -148,12 +148,12 @@ const CartPage = () => {
               TAX
               <b> {((subTotal / 100) * 10).toFixed(2)}</b>
             </h4>
-            <h3>
+            <h4>
               GRAND TOTAL -{" "}
               <b>
                 {Number(subTotal) + Number(((subTotal / 100) * 10).toFixed(2))}
               </b>
-            </h3>
+            </h4>
           </div>
           <div className="d-flex justify-content-end">
             <Button type="primary" htmlType="submit">

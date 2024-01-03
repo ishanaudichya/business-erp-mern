@@ -16,13 +16,14 @@
 }
 h1 {
   font-size: 1.5em;
-  color: #222;
+  color: #ffffff;
 }
 h2 {
   font-size: 0.9em;
 }
 h3 {
   font-size: 1.2em;
+  color: #ffffff;
   font-weight: 300;
   line-height: 2em;
 }
