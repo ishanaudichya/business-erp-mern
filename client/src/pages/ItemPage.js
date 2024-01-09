@@ -9,6 +9,9 @@ const ItemPage = () => {
   const [itemsData, setItemsData] = useState([]);
   const [popupModal, setPopupModal] = useState(false);
   const [editItem, setEditItem] = useState(null);
+  const notAllowed = () => {
+    message.error("This function is not allowed in demo mode");
+  };
   const getAllItems = async () => {
     try {
       dispatch({
@@ -79,7 +82,8 @@ const ItemPage = () => {
           <DeleteOutlined
             style={{ cursor: "pointer" }}
             onClick={() => {
-              handleDelete(record);
+              notAllowed();
+              // handleDelete(record);
             }}
           />
         </div>
@@ -155,7 +159,8 @@ const ItemPage = () => {
           <Form
             layout="vertical"
             initialValues={editItem}
-            onFinish={handleSubmit}
+            // onFinish={handleSubmit}
+            onFinish={notAllowed}
           >
             <Form.Item name="name" label="Name">
               <Input />
