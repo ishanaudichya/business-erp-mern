@@ -15,7 +15,7 @@ const Login = () => {
         type: "SHOW_LOADING",
       });
       const res = await axios.post(
-        "https://business-erp-mern.vercel.app/api/users/login",
+        `${process.env.REACT_APP_SERVER_URL}/api/users/login`,
         value
       );
       dispatch({ type: "HIDE_LOADING" });
