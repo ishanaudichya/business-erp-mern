@@ -18,7 +18,7 @@ const ItemPage = () => {
         type: "SHOW_LOADING",
       });
       const { data } = await axios.get(
-        "https://business-erp-mern.vercel.app/api/items/get-item"
+        `${process.env.REACT_APP_SERVER_URL}/api/items/get-item`
       );
       setItemsData(data);
       dispatch({ type: "HIDE_LOADING" });
@@ -41,7 +41,7 @@ const ItemPage = () => {
         type: "SHOW_LOADING",
       });
       await axios.post(
-        "https://business-erp-mern.vercel.app/api/items/delete-item",
+        `${process.env.REACT_APP_SERVER_URL}/api/items/delete-item`,
         { itemId: record._id }
       );
       message.success("Item Deleted Succesfully");
@@ -99,7 +99,7 @@ const ItemPage = () => {
           type: "SHOW_LOADING",
         });
         const res = await axios.post(
-          "https://business-erp-mern.vercel.app/api/items/add-item",
+          `${process.env.REACT_APP_SERVER_URL}/api/items/add-item`,
           value
         );
         message.success("Item Added Succesfully");
@@ -117,7 +117,7 @@ const ItemPage = () => {
           type: "SHOW_LOADING",
         });
         await axios.put(
-          "https://business-erp-mern.vercel.app/api/items/edit-item",
+          `${process.env.REACT_APP_SERVER_URL}/api/items/edit-item`,
           {
             ...value,
             itemId: editItem._id,
