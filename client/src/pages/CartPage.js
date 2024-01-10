@@ -97,7 +97,7 @@ const CartPage = () => {
       };
       // console.log(newObject);
       await axios.post(
-        "https://business-erp-mern.vercel.app/api/bills/add-bills",
+        `${process.env.REACT_APP_SERVER_URL}/api/bills/add-bills`,
         newObject
       );
       message.success("Bill Generated");
