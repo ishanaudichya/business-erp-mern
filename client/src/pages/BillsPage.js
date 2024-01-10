@@ -19,7 +19,7 @@ const BillsPage = () => {
         type: "SHOW_LOADING",
       });
       const { data } = await axios.get(
-        "https://business-erp-mern.vercel.app/api/bills/get-bills"
+        `${process.env.REACT_APP_SERVER_URL}/api/bills/get-bills`
       );
       setBillsData(data);
       dispatch({ type: "HIDE_LOADING" });
