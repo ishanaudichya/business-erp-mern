@@ -78,4 +78,4 @@ We welcome contributions from the open-source community to improve and enhance o
 6. Provide a clear and concise description of your changes in the PR.
 7. Be responsive to feedback and be willing to make necessary adjustments.
 
-Our maintainers will review your contributions and merge them if they meet our quality standards. Thank you for your interest in improving our project!
+I will review your contributions and merge them if they meet our quality standards. Thank you for your interest in improving our project!
