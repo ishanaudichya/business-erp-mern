@@ -53,9 +53,7 @@ const Login = () => {
             <Form.Item name="password" label="Password">
               <Input required type="password" />
             </Form.Item>
-            <p className="test-creds">
-              UserId: 123456 | Password: testpassword
-            </p>
+            <p className="test-creds">UserId: 123 | Password: 123</p>
             <div className="d-flex justify-content-between">
               <p>
                 not a user? Please
