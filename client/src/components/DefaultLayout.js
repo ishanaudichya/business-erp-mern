@@ -80,9 +80,8 @@ const DefaultLayout = ({ children }) => {
           className="text-center text-light font-wight-bold mb-4 b-0 w-100 position-absolute"
           style={{ position: "absolute", bottom: "0", width: "100%" }}
         >
-          Developed by<br></br>{" "}
-          <a href="https://ishanaudichya.netlify.app/">Ishan Audichya</a> Under
-          E-ConnectSPL
+          Under E-ConnectSPL<br></br>{" "}
+          <a href="https://ishanaudichya.netlify.app/">Ishan Audichya</a>
         </div>
       </Sider>
       <Layout className="site-layout">
